@@ -1205,3 +1205,19 @@ button {
         flex-direction: column;
     }
    }
+/* Account type selector */
+
+.form-group select {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d6dbe1;
+    border-radius: 6px;
+    outline: none;
+    color: #202733;
+    background: white;
+}
+
+.form-group select:focus {
+    border-color: #0b1f3a;
+    box-shadow: 0 0 0 3px rgba(11, 31, 58, 0.08);
+}
