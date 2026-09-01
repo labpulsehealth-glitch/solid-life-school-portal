@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard | Solid Life Schools</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+        <div class="dashboard-brand">
+            <div class="logo-mark">SLS</div>
+
+            <div>
+                <strong>Solid Life Schools</strong>
+                <span>Administration Portal</span>
+            </div>
+        </div>
+
+        <button class="logout-button" onclick="logout()">
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- Main Dashboard -->
+    <main class="dashboard-container">
+
+        <!-- Welcome -->
+        <section class="dashboard-welcome">
+
+            <div>
+                <p class="section-label">ADMINISTRATION</p>
+                <h1>Welcome, Administrator</h1>
+                <p>Manage students, teachers and school records.</p>
+            </div>
+
+            <div class="student-badge">
+                <strong>ADMIN/2026/001</strong>
+                <span>Administrator</span>
+            </div>
+
+        </section>
+
+
+        <!-- Statistics -->
+        <section class="summary-grid">
+
+            <div class="summary-card">
+                <span class="summary-icon">👩‍🎓</span>
+                <div>
+                    <span>Total Students</span>
+                    <strong>486</strong>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-icon">👩‍🏫</span>
+                <div>
+                    <span>Total Teachers</span>
+                    <strong>42</strong>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-icon">🏫</span>
+                <div>
+                    <span>Classes</span>
+                    <strong>18</strong>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-icon">📄</span>
+                <div>
+                    <span>Pending Requests</span>
+                    <strong>7</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Dashboard Sections -->
+        <section class="dashboard-grid">
+
+            <!-- Recent Activity -->
+            <div class="dashboard-card">
+
+                <div class="card-heading">
+                    <div>
+                        <p class="section-label">SYSTEM ACTIVITY</p>
+                        <h2>Recent Activity</h2>
+                    </div>
+                </div>
+
+                <div class="activity-list">
+
+                    <div class="activity-item">
+                        <span class="activity-icon">📝</span>
+                        <div>
+                            <strong>Biology results submitted</strong>
+                            <p>Mrs. Williams submitted SS 2A results.</p>
+                            <small>Today, 10:42 AM</small>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon">👩‍🎓</span>
+                        <div>
+                            <strong>New student registered</strong>
+                            <p>A new student was added to SS 1B.</p>
+                            <small>Today, 9:18 AM</small>
+                        </div>
+                    </div>
+
+                    <div class="activity-item">
+                        <span class="activity-icon">📄</span>
+                        <div>
+                            <strong>Transcript request received</strong>
+                            <p>A transcript request requires review.</p>
+                            <small>Yesterday, 3:25 PM</small>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Attendance -->
+            <div class="dashboard-card">
+
+                <div class="card-heading">
+                    <div>
+                        <p class="section-label">TODAY</p>
+                        <h2>Attendance Overview</h2>
+                    </div>
+                </div>
+
+                <div class="attendance-overview">
+
+                    <div class="attendance-number">
+                        <strong>92%</strong>
+                        <span>Overall attendance</span>
+                    </div>
+
+                    <div class="attendance-row">
+                        <span>Present</span>
+                        <strong>447</strong>
+                    </div>
+
+                    <div class="attendance-row">
+                        <span>Absent</span>
+                        <strong>29</strong>
+                    </div>
+
+                    <div class="attendance-row">
+                        <span>Late</span>
+                        <strong>10</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Quick Management -->
+        <section class="quick-access">
+
+            <div class="section-heading">
+                <p class="section-label">MANAGEMENT</p>
+                <h2>School Administration</h2>
+            </div>
+
+            <div class="quick-grid">
+
+                <a href="#" class="quick-card">
+                    <span>👩‍🎓</span>
+                    <strong>Students</strong>
+                    <small>Manage student records</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>👩‍🏫</span>
+                    <strong>Teachers</strong>
+                    <small>Manage teacher accounts</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>🏫</span>
+                    <strong>Classes & Subjects</strong>
+                    <small>Manage classes and subjects</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>📊</span>
+                    <strong>Results</strong>
+                    <small>Review academic results</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>📅</span>
+                    <strong>Attendance</strong>
+                    <small>View attendance records</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>📢</span>
+                    <strong>Announcements</strong>
+                    <small>Create school announcements</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>📄</span>
+                    <strong>Transcript Requests</strong>
+                    <small>Review transcript requests</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>⚙️</span>
+                    <strong>Settings</strong>
+                    <small>Manage portal settings</small>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- Pending Requests -->
+        <section class="dashboard-card full-card">
+
+            <div class="card-heading">
+
+                <div>
+                    <p class="section-label">REQUIRES ATTENTION</p>
+                    <h2>Pending Transcript Requests</h2>
+                </div>
+
+                <a href="#">View all</a>
+
+            </div>
+
+
+            <div class="class-table-wrapper">
+
+                <table class="class-table">
+
+                    <thead>
+                        <tr>
+                            <th>Student</th>
+                            <th>Student ID</th>
+                            <th>Request Type</th>
+                            <th>Date</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Daniel Adewale</td>
+                            <td>SLS/2026/001</td>
+                            <td>Official Transcript</td>
+                            <td>01 Sep 2026</td>
+                            <td>
+                                <span class="status-pending">Pending</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Sarah Johnson</td>
+                            <td>SLS/2026/014</td>
+                            <td>Academic Record</td>
+                            <td>31 Aug 2026</td>
+                            <td>
+                                <span class="status-pending">Pending</span>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Michael Okoro</td>
+                            <td>SLS/2026/029</td>
+                            <td>Official Transcript</td>
+                            <td>30 Aug 2026</td>
+                            <td>
+                                <span class="status-pending">Pending</span>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="dashboard-footer">
+        <p>© 2026 Solid Life Schools</p>
+        <p>Administration Portal</p>
+    </footer>
+
+
+    <script>
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+                                  </html>
