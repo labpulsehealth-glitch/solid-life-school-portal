@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard | Solid Life Schools</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+        <div class="dashboard-brand">
+            <div class="logo-mark">SLS</div>
+
+            <div>
+                <strong>Solid Life Schools</strong>
+                <span>Teacher Portal</span>
+            </div>
+        </div>
+
+        <button class="logout-button" onclick="logout()">
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="dashboard-container">
+
+        <!-- Welcome -->
+        <section class="dashboard-welcome">
+
+            <div>
+                <p class="section-label">TEACHER ACCOUNT</p>
+                <h1>Good morning, Mrs. Williams</h1>
+                <p>Manage your classes, results and attendance.</p>
+            </div>
+
+            <div class="student-badge">
+                <strong>EMP/2026/014</strong>
+                <span>Teacher</span>
+            </div>
+
+        </section>
+
+
+        <!-- Summary -->
+        <section class="summary-grid">
+
+            <div class="summary-card">
+                <span class="summary-icon">👩‍🎓</span>
+                <div>
+                    <span>Students</span>
+                    <strong>86</strong>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-icon">📚</span>
+                <div>
+                    <span>Subjects</span>
+                    <strong>3</strong>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-icon">🏫</span>
+                <div>
+                    <span>Classes</span>
+                    <strong>3</strong>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-icon">📝</span>
+                <div>
+                    <span>Pending Results</span>
+                    <strong>12</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Assigned Classes -->
+        <section class="dashboard-card full-card">
+
+            <div class="card-heading">
+                <div>
+                    <p class="section-label">TEACHING ASSIGNMENTS</p>
+                    <h2>My Classes & Subjects</h2>
+                </div>
+            </div>
+
+            <div class="class-table-wrapper">
+
+                <table class="class-table">
+
+                    <thead>
+                        <tr>
+                            <th>Class</th>
+                            <th>Subject</th>
+                            <th>Students</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>SS 2A</td>
+                            <td>Biology</td>
+                            <td>30</td>
+                            <td>
+                                <button class="table-button">Enter Results</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>SS 2B</td>
+                            <td>Biology</td>
+                            <td>28</td>
+                            <td>
+                                <button class="table-button">Enter Results</button>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>SS 1A</td>
+                            <td>Basic Science</td>
+                            <td>28</td>
+                            <td>
+                                <button class="table-button">Enter Results</button>
+                            </td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Teacher Actions -->
+        <section class="quick-access">
+
+            <div class="section-heading">
+                <p class="section-label">TEACHER SERVICES</p>
+                <h2>Quick Actions</h2>
+            </div>
+
+            <div class="quick-grid">
+
+                <a href="#" class="quick-card">
+                    <span>📝</span>
+                    <strong>Enter Results</strong>
+                    <small>Record CA and examination scores</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>📅</span>
+                    <strong>Record Attendance</strong>
+                    <small>Mark today's attendance</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>📢</span>
+                    <strong>Class Announcements</strong>
+                    <small>Post a notice for your class</small>
+                </a>
+
+                <a href="#" class="quick-card">
+                    <span>👩‍🎓</span>
+                    <strong>My Students</strong>
+                    <small>View assigned students</small>
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="dashboard-footer">
+        <p>© 2026 Solid Life Schools</p>
+        <p>Teacher Portal</p>
+    </footer>
+
+
+    <script>
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+</html>
