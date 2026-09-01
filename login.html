@@ -13,36 +13,56 @@
 
         <div class="login-brand">
             <div class="logo-mark">SLS</div>
+
             <div>
                 <strong>Solid Life Schools</strong>
                 <span>School Portal</span>
             </div>
         </div>
 
+
         <div class="login-card">
 
             <div class="login-heading">
                 <p class="section-label">SECURE ACCESS</p>
                 <h1>Welcome Back</h1>
-                <p>Sign in to access your student account.</p>
+                <p>Sign in to access your portal account.</p>
             </div>
+
 
             <form id="loginForm">
 
+                <!-- Account Type -->
                 <div class="form-group">
-                    <label for="studentId">Student ID</label>
+                    <label for="accountType">Account Type</label>
+
+                    <select id="accountType" required>
+                        <option value="student">Student / Parent</option>
+                        <option value="teacher">Teacher</option>
+                        <option value="admin">Administrator</option>
+                    </select>
+                </div>
+
+
+                <!-- ID -->
+                <div class="form-group">
+                    <label for="userId">ID</label>
+
                     <input
                         type="text"
-                        id="studentId"
-                        placeholder="e.g. SLS/2026/001"
+                        id="userId"
+                        placeholder="Enter your ID"
                         required
                     >
                 </div>
 
+
+                <!-- Password -->
                 <div class="form-group">
                     <label for="password">Password</label>
 
                     <div class="password-wrapper">
+
                         <input
                             type="password"
                             id="password"
@@ -57,34 +77,48 @@
                         >
                             Show
                         </button>
+
                     </div>
                 </div>
 
+
+                <!-- Options -->
                 <div class="login-options">
+
                     <label class="remember-me">
                         <input type="checkbox" id="rememberMe">
                         <span>Remember me</span>
                     </label>
 
-                    <a href="#" id="forgotPassword">Forgot password?</a>
+                    <a href="#" id="forgotPassword">
+                        Forgot password?
+                    </a>
+
                 </div>
 
+
+                <!-- Login -->
                 <button type="submit" class="login-button">
                     Login
                 </button>
 
+
+                <!-- Message -->
                 <p id="loginMessage" class="login-message"></p>
 
             </form>
 
         </div>
 
+
         <div class="login-help">
             <p>Having trouble accessing your account?</p>
+
             <a href="mailto:info@solidlifeschools.com">
                 Contact School Administration
             </a>
         </div>
+
 
         <a href="index.html" class="back-home">
             ← Back to School Portal
@@ -92,50 +126,163 @@
 
     </main>
 
+
     <script>
+
         const loginForm = document.getElementById("loginForm");
+        const accountType = document.getElementById("accountType");
+        const userId = document.getElementById("userId");
         const passwordInput = document.getElementById("password");
         const togglePassword = document.getElementById("togglePassword");
         const loginMessage = document.getElementById("loginMessage");
 
+
+        /* =====================================
+           DEMO ACCOUNT INFORMATION
+        ===================================== */
+
+        const accounts = {
+
+            student: {
+                id: "SLS/2026/001",
+                password: "student123",
+                page: "student-dashboard.html"
+            },
+
+            teacher: {
+                id: "EMP/2026/014",
+                password: "teacher123",
+                page: "teacher-dashboard.html"
+            },
+
+            admin: {
+                id: "ADMIN/2026/001",
+                password: "admin123",
+                page: "admin-dashboard.html"
+            }
+
+        };
+
+
+        /* =====================================
+           CHANGE PLACEHOLDER
+        ===================================== */
+
+        accountType.addEventListener("change", function () {
+
+            if (accountType.value === "student") {
+                userId.placeholder = "e.g. SLS/2026/001";
+            }
+
+            if (accountType.value === "teacher") {
+                userId.placeholder = "e.g. EMP/2026/014";
+            }
+
+            if (accountType.value === "admin") {
+                userId.placeholder = "e.g. ADMIN/2026/001";
+            }
+
+        });
+
+
+        /* =====================================
+           SHOW / HIDE PASSWORD
+        ===================================== */
+
         togglePassword.addEventListener("click", function () {
+
             if (passwordInput.type === "password") {
+
                 passwordInput.type = "text";
                 togglePassword.textContent = "Hide";
+
             } else {
+
                 passwordInput.type = "password";
                 togglePassword.textContent = "Show";
+
             }
+
         });
+
+
+        /* =====================================
+           LOGIN
+        ===================================== */
 
         loginForm.addEventListener("submit", function (event) {
+
             event.preventDefault();
 
-            const studentId = document.getElementById("studentId").value.trim();
-            const password = passwordInput.value.trim();
+            const selectedAccount = accountType.value;
 
-            if (studentId === "SLS/2026/001" && password === "student123") {
-                loginMessage.textContent = "Login successful. Redirecting...";
-                loginMessage.className = "login-message success";
+            const enteredId = userId.value.trim();
+            const enteredPassword = passwordInput.value.trim();
+
+            const account = accounts[selectedAccount];
+
+
+            if (
+                enteredId === account.id &&
+                enteredPassword === account.password
+            ) {
+
+                /*
+                    Store the account type temporarily.
+                    This will help us later when we build
+                    the full authentication system.
+                */
+
+                sessionStorage.setItem(
+                    "portalUserType",
+                    selectedAccount
+                );
+
+                loginMessage.textContent =
+                    "Login successful. Redirecting...";
+
+                loginMessage.className =
+                    "login-message success";
+
 
                 setTimeout(function () {
-                    window.location.href = "student-dashboard.html";
+
+                    window.location.href = account.page;
+
                 }, 700);
 
+
             } else {
+
                 loginMessage.textContent =
-                    "Invalid Student ID or password. Please try again.";
-                loginMessage.className = "login-message error";
+                    "Invalid ID or password. Please try again.";
+
+                loginMessage.className =
+                    "login-message error";
+
             }
+
         });
 
-        document.getElementById("forgotPassword").addEventListener("click", function (event) {
-            event.preventDefault();
 
-            loginMessage.textContent =
-                "Please contact the school administration to reset your password.";
-            loginMessage.className = "login-message";
-        });
+        /* =====================================
+           FORGOT PASSWORD
+        ===================================== */
+
+        document
+            .getElementById("forgotPassword")
+            .addEventListener("click", function (event) {
+
+                event.preventDefault();
+
+                loginMessage.textContent =
+                    "Please contact the school administration to reset your password.";
+
+                loginMessage.className =
+                    "login-message";
+
+            });
+
     </script>
 
 </body>
