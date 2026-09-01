@@ -280,10 +280,10 @@ a {
 }
 
 .feature-card h3 {
-    color: #0b1f3a;
-    font-weight: 700;
+    color: #0b1f3a !important;
     font-size: 18px;
     margin-bottom: 8px;
+    font-weight: 700;
 }
 
 .feature-card p {
@@ -505,8 +505,10 @@ a {
 }
 
 .feature-card h3 {
+    color: #0b1f3a !important;
+    font-size: 18px;
     margin-bottom: 8px;
-    color: #075e54;
+    font-weight: 700;
 }
 
 .feature-card p {
