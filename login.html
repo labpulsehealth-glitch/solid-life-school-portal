@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Solid Life Schools</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="login-page">
+
+    <main class="login-container">
+
+        <div class="login-brand">
+            <div class="logo-mark">SLS</div>
+            <div>
+                <strong>Solid Life Schools</strong>
+                <span>School Portal</span>
+            </div>
+        </div>
+
+        <div class="login-card">
+
+            <div class="login-heading">
+                <p class="section-label">SECURE ACCESS</p>
+                <h1>Welcome Back</h1>
+                <p>Sign in to access your student account.</p>
+            </div>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="studentId">Student ID</label>
+                    <input
+                        type="text"
+                        id="studentId"
+                        placeholder="e.g. SLS/2026/001"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+
+                    <div class="password-wrapper">
+                        <input
+                            type="password"
+                            id="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+
+                        <button
+                            type="button"
+                            class="show-password"
+                            id="togglePassword"
+                        >
+                            Show
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe">
+                        <span>Remember me</span>
+                    </label>
+
+                    <a href="#" id="forgotPassword">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="login-button">
+                    Login
+                </button>
+
+                <p id="loginMessage" class="login-message"></p>
+
+            </form>
+
+        </div>
+
+        <div class="login-help">
+            <p>Having trouble accessing your account?</p>
+            <a href="mailto:info@solidlifeschools.com">
+                Contact School Administration
+            </a>
+        </div>
+
+        <a href="index.html" class="back-home">
+            ← Back to School Portal
+        </a>
+
+    </main>
+
+    <script>
+        const loginForm = document.getElementById("loginForm");
+        const passwordInput = document.getElementById("password");
+        const togglePassword = document.getElementById("togglePassword");
+        const loginMessage = document.getElementById("loginMessage");
+
+        togglePassword.addEventListener("click", function () {
+            if (passwordInput.type === "password") {
+                passwordInput.type = "text";
+                togglePassword.textContent = "Hide";
+            } else {
+                passwordInput.type = "password";
+                togglePassword.textContent = "Show";
+            }
+        });
+
+        loginForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+
+            const studentId = document.getElementById("studentId").value.trim();
+            const password = passwordInput.value.trim();
+
+            if (studentId === "SLS/2026/001" && password === "student123") {
+                loginMessage.textContent = "Login successful. Redirecting...";
+                loginMessage.className = "login-message success";
+
+                setTimeout(function () {
+                    window.location.href = "student-dashboard.html";
+                }, 700);
+
+            } else {
+                loginMessage.textContent =
+                    "Invalid Student ID or password. Please try again.";
+                loginMessage.className = "login-message error";
+            }
+        });
+
+        document.getElementById("forgotPassword").addEventListener("click", function (event) {
+            event.preventDefault();
+
+            loginMessage.textContent =
+                "Please contact the school administration to reset your password.";
+            loginMessage.className = "login-message";
+        });
+    </script>
+
+</body>
+</html>
