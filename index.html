@@ -3,111 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Solid Life Schools | Student Portal</title>
-
+    <title>Solid Life Schools | School Portal</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
     <!-- Header -->
-    <header>
-        <div class="logo">
-            Solid Life Schools
-        </div>
+    <header class="header">
+        <div class="container nav-container">
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
-        </nav>
+            <a href="index.html" class="logo">
+                <div class="logo-mark">SLS</div>
+                <div class="logo-text">
+                    <strong>Solid Life Schools</strong>
+                    <span>School Portal</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <a href="index.html" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+        </div>
     </header>
 
 
-    <!-- Main content -->
+    <!-- Main -->
     <main>
 
-        <!-- Hero section -->
+        <!-- Hero -->
         <section class="hero">
+            <div class="container hero-content">
 
-            <p class="welcome">
-                WELCOME TO SOLID LIFE SCHOOLS
-            </p>
+                <div class="hero-text">
+                    <p class="welcome-text">WELCOME TO</p>
 
-            <h1>
-                Your School.<br>
-                Your Information.<br>
-                One Portal.
-            </h1>
+                    <h1>Solid Life Schools</h1>
 
-            <p class="hero-text">
-                Access academic results, attendance, subjects,
-                teachers, school announcements and academic records
-                from one secure portal.
-            </p>
+                    <h2>Student Portal</h2>
 
+                    <p class="hero-description">
+                        Access academic results, attendance, announcements,
+                        academic records and other school information.
+                    </p>
 
-            <div class="login-buttons">
+                    <a href="login.html" class="primary-button">
+                        Student / Parent Login
+                    </a>
+                </div>
 
-                <a href="login.html" class="primary-button">
-                    Student / Parent Login
-                </a>
+                <div class="hero-panel">
+                    <div class="panel-top">
+                        <span class="panel-label">SCHOOL PORTAL</span>
+                        <span class="status-dot"></span>
+                    </div>
 
-                <a href="login.html" class="secondary-button">
-                    Access Student Account
-                </a>
+                    <div class="panel-icon">🎓</div>
+
+                    <h3>Welcome Back</h3>
+
+                    <p>
+                        Sign in to access your student's school information.
+                    </p>
+
+                    <a href="login.html" class="panel-button">
+                        Access Account
+                    </a>
+                </div>
 
             </div>
-
         </section>
 
 
-        <!-- Features -->
-        <section class="features">
+        <!-- Portal Features -->
+        <section class="features" id="about">
+            <div class="container">
 
-            <h2>
-                Everything in one place
-            </h2>
+                <div class="section-heading">
+                    <p class="section-label">PORTAL SERVICES</p>
+                    <h2>What you can access</h2>
+                </div>
 
-            <p class="section-intro">
-                A simple digital platform connecting students,
-                parents and the school.
-            </p>
+                <div class="feature-grid">
 
+                    <div class="feature-card">
+                        <div class="feature-icon">📊</div>
+                        <h3>Academic Results</h3>
+                        <p>View continuous assessment, examination scores and overall results.</p>
+                    </div>
 
-            <div class="feature-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">📅</div>
+                        <h3>Attendance</h3>
+                        <p>Check attendance records and monitor school attendance.</p>
+                    </div>
 
-                <div class="feature-card">
+                    <div class="feature-card">
+                        <div class="feature-icon">📚</div>
+                        <h3>Subjects & Teachers</h3>
+                        <p>View registered subjects and the teachers assigned to them.</p>
+                    </div>
 
-                    <div class="icon">📊</div>
+                    <div class="feature-card">
+                        <div class="feature-icon">📢</div>
+                        <h3>Announcements</h3>
+                        <p>Stay informed about important school announcements and notices.</p>
+                    </div>
 
-                    <h3>
-                        Academic Results
-                    </h3>
+                    <div class="feature-card">
+                        <div class="feature-icon">📁</div>
+                        <h3>Academic Records</h3>
+                        <p>Access available academic records and student information.</p>
+                    </div>
 
-                    <p>
-                        View current and previous academic
-                        results and report cards.
-                    </p>
+                    <div class="feature-card">
+                        <div class="feature-icon">📄</div>
+                        <h3>Transcript Requests</h3>
+                        <p>Submit and track requests for academic transcripts.</p>
+                    </div>
 
                 </div>
 
+            </div>
+        </section>
 
-                <div class="feature-card">
 
-                    <div class="icon">📅</div>
+        <!-- Contact -->
+        <section class="contact-section" id="contact">
+            <div class="container contact-content">
 
-                    <h3>
-                        Attendance
-                    </h3>
-
+                <div>
+                    <p class="section-label">NEED HELP?</p>
+                    <h2>Contact the school</h2>
                     <p>
-                        Keep track of attendance throughout
-                        the academic term.
+                        For login assistance or questions about your records,
+                        please contact the school administration.
                     </p>
-
                 </div>
+
+                <a href="mailto:info@solidlifeschools.com" class="secondary-button">
+                    Contact Administration
+                </a>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>© 2026 Solid Life Schools. All rights reserved.</p>
+            <p>Student Portal</p>
+        </div>
+    </footer>
+
+</body>
+</html>                </div>
 
 
                 <div class="feature-card">
