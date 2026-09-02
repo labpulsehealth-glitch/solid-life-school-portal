@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance | Solid Life Schools</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+<header class="dashboard-header">
+
+    <div class="dashboard-brand">
+        <div class="logo-mark">SLS</div>
+        <div>
+            <strong>Solid Life Schools</strong>
+            <span>Student Portal</span>
+        </div>
+    </div>
+
+    <button class="logout-button" onclick="logout()">Logout</button>
+
+</header>
+
+<main class="dashboard-container">
+
+    <div class="page-back">
+        <a href="student-dashboard.html">← Back to Dashboard</a>
+    </div>
+
+    <section class="dashboard-welcome">
+        <div>
+            <p class="section-label">STUDENT RECORD</p>
+            <h1>Attendance</h1>
+            <p>View your attendance records for the current term.</p>
+        </div>
+    </section>
+
+    <section class="summary-grid">
+
+        <div class="summary-card">
+            <span class="summary-icon">📅</span>
+            <div>
+                <span>School Days</span>
+                <strong>65</strong>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <span class="summary-icon">✓</span>
+            <div>
+                <span>Present</span>
+                <strong>59</strong>
+            </div>
+        </div>
+
+        <div class="summary-card">
+            <span class="summary-icon">%</span>
+            <div>
+                <span>Attendance Rate</span>
+                <strong>91%</strong>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="dashboard-card full-card">
+
+        <div class="card-heading">
+            <div>
+                <p class="section-label">2025/2026 — FIRST TERM</p>
+                <h2>Attendance Record</h2>
+            </div>
+        </div>
+
+        <div class="class-table-wrapper">
+
+            <table class="class-table">
+
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Remark</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>September 8, 2025</td>
+                        <td>Present</td>
+                        <td>—</td>
+                    </tr>
+
+                    <tr>
+                        <td>September 9, 2025</td>
+                        <td>Present</td>
+                        <td>—</td>
+                    </tr>
+
+                    <tr>
+                        <td>September 10, 2025</td>
+                        <td>Absent</td>
+                        <td>Excused</td>
+                    </tr>
+
+                    <tr>
+                        <td>September 11, 2025</td>
+                        <td>Present</td>
+                        <td>—</td>
+                    </tr>
+
+                    <tr>
+                        <td>September 12, 2025</td>
+                        <td>Late</td>
+                        <td>Arrived after assembly</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer class="dashboard-footer">
+    <p>© 2026 Solid Life Schools</p>
+    <p>Student Portal</p>
+</footer>
+
+<script>
+function logout() {
+    window.location.href = "login.html";
+}
+</script>
+
+</body>
+</html>
