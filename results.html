@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Results | Solid Life Schools</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- Header -->
+    <header class="dashboard-header">
+
+        <div class="dashboard-brand">
+            <div class="logo-mark">SLS</div>
+
+            <div>
+                <strong>Solid Life Schools</strong>
+                <span>Student Portal</span>
+            </div>
+        </div>
+
+        <button class="logout-button" onclick="logout()">
+            Logout
+        </button>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="dashboard-container">
+
+        <div class="page-back">
+            <a href="student-dashboard.html">← Back to Dashboard</a>
+        </div>
+
+
+        <!-- Page Heading -->
+        <section class="dashboard-welcome">
+
+            <div>
+                <p class="section-label">ACADEMIC RECORDS</p>
+                <h1>Academic Results</h1>
+                <p>View your continuous assessment and examination results.</p>
+            </div>
+
+            <div class="student-badge">
+                <strong>SLS/2026/001</strong>
+                <span>SS 2A</span>
+            </div>
+
+        </section>
+
+
+        <!-- Student Information -->
+        <section class="dashboard-card">
+
+            <div class="student-information">
+
+                <div>
+                    <span>Student</span>
+                    <strong>Daniel Adewale</strong>
+                </div>
+
+                <div>
+                    <span>Class</span>
+                    <strong>SS 2A</strong>
+                </div>
+
+                <div>
+                    <span>Session</span>
+                    <strong>2025/2026</strong>
+                </div>
+
+                <div>
+                    <span>Term</span>
+                    <strong>First Term</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Overall Performance -->
+        <section class="summary-grid result-summary">
+
+            <div class="summary-card">
+                <span class="summary-icon">📊</span>
+                <div>
+                    <span>Average Score</span>
+                    <strong>78%</strong>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-icon">🏆</span>
+                <div>
+                    <span>Overall Grade</span>
+                    <strong>B</strong>
+                </div>
+            </div>
+
+            <div class="summary-card">
+                <span class="summary-icon">📚</span>
+                <div>
+                    <span>Subjects</span>
+                    <strong>12</strong>
+                </div>
+            </div>
+
+        </section>
+
+
+        <!-- Results Table -->
+        <section class="dashboard-card full-card">
+
+            <div class="card-heading">
+
+                <div>
+                    <p class="section-label">FIRST TERM</p>
+                    <h2>Subject Results</h2>
+                </div>
+
+            </div>
+
+
+            <div class="class-table-wrapper">
+
+                <table class="class-table">
+
+                    <thead>
+                        <tr>
+                            <th>Subject</th>
+                            <th>CA</th>
+                            <th>Exam</th>
+                            <th>Total</th>
+                            <th>Grade</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>Mathematics</td>
+                            <td>28</td>
+                            <td>54</td>
+                            <td><strong>82</strong></td>
+                            <td><strong>A</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>English Language</td>
+                            <td>25</td>
+                            <td>51</td>
+                            <td><strong>76</strong></td>
+                            <td><strong>B</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>Biology</td>
+                            <td>30</td>
+                            <td>55</td>
+                            <td><strong>85</strong></td>
+                            <td><strong>A</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>Chemistry</td>
+                            <td>24</td>
+                            <td>49</td>
+                            <td><strong>73</strong></td>
+                            <td><strong>B</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>Physics</td>
+                            <td>25</td>
+                            <td>49</td>
+                            <td><strong>74</strong></td>
+                            <td><strong>B</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>Government</td>
+                            <td>27</td>
+                            <td>50</td>
+                            <td><strong>77</strong></td>
+                            <td><strong>B</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>Economics</td>
+                            <td>29</td>
+                            <td>48</td>
+                            <td><strong>77</strong></td>
+                            <td><strong>B</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td>Computer Science</td>
+                            <td>30</td>
+                            <td>52</td>
+                            <td><strong>82</strong></td>
+                            <td><strong>A</strong></td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+        <!-- Teacher's Comment -->
+        <section class="dashboard-card">
+
+            <div class="card-heading">
+                <div>
+                    <p class="section-label">TEACHER'S REMARK</p>
+                    <h2>Academic Comment</h2>
+                </div>
+            </div>
+
+            <p class="academic-comment">
+                Daniel has demonstrated good academic performance this term.
+                He participates actively in class and shows particular strength
+                in the sciences. He is encouraged to maintain his effort and
+                improve his consistency in all subjects.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer class="dashboard-footer">
+        <p>© 2026 Solid Life Schools</p>
+        <p>Student Portal</p>
+    </footer>
+
+
+    <script>
+        function logout() {
+            window.location.href = "login.html";
+        }
+    </script>
+
+</body>
+                          </html>
