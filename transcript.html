@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcript Requests | Solid Life Schools</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dashboard-page">
+
+<header class="dashboard-header">
+
+    <div class="dashboard-brand">
+        <div class="logo-mark">SLS</div>
+        <div>
+            <strong>Solid Life Schools</strong>
+            <span>Student Portal</span>
+        </div>
+    </div>
+
+    <button class="logout-button" onclick="logout()">Logout</button>
+
+</header>
+
+
+<main class="dashboard-container">
+
+    <div class="page-back">
+        <a href="student-dashboard.html">← Back to Dashboard</a>
+    </div>
+
+
+    <section class="dashboard-welcome">
+
+        <div>
+            <p class="section-label">ACADEMIC SERVICES</p>
+            <h1>Transcript Requests</h1>
+            <p>Submit and track requests for academic transcripts.</p>
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-card">
+
+        <div class="card-heading">
+
+            <div>
+                <p class="section-label">NEW REQUEST</p>
+                <h2>Request a Transcript</h2>
+            </div>
+
+        </div>
+
+
+        <form id="transcriptForm">
+
+            <div class="form-group">
+                <label for="purpose">Purpose of Request</label>
+
+                <select id="purpose" required>
+
+                    <option value="">Select purpose</option>
+                    <option value="university">University Admission</option>
+                    <option value="scholarship">Scholarship</option>
+                    <option value="employment">Employment</option>
+                    <option value="personal">Personal Use</option>
+                    <option value="other">Other</option>
+
+                </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="destination">
+                    Institution / Organisation
+                </label>
+
+                <input
+                    type="text"
+                    id="destination"
+                    placeholder="Enter institution or organisation"
+                    required
+                >
+
+            </div>
+
+
+            <div class="form-group">
+
+                <label for="notes">
+                    Additional Information
+                </label>
+
+                <textarea
+                    id="notes"
+                    rows="4"
+                    placeholder="Any additional information..."
+                ></textarea>
+
+            </div>
+
+
+            <button type="submit" class="primary-button">
+                Submit Transcript Request
+            </button>
+
+        </form>
+
+
+        <div id="successMessage" style="display:none; margin-top:20px;">
+
+            <strong>✓ Request submitted successfully.</strong>
+
+            <p>
+                Your transcript request has been received by the school.
+                You can check its status below.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="dashboard-card">
+
+        <div class="card-heading">
+
+            <div>
+                <p class="section-label">REQUEST HISTORY</p>
+                <h2>Previous Requests</h2>
+            </div>
+
+        </div>
+
+
+        <div class="class-table-wrapper">
+
+            <table class="class-table">
+
+                <thead>
+                    <tr>
+                        <th>Request ID</th>
+                        <th>Date</th>
+                        <th>Purpose</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>TR-00124</td>
+                        <td>August 20, 2026</td>
+                        <td>University Admission</td>
+                        <td>Processing</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer class="dashboard-footer">
+    <p>© 2026 Solid Life Schools</p>
+    <p>Student Portal</p>
+</footer>
+
+
+<script>
+
+function logout() {
+    window.location.href = "login.html";
+}
+
+
+document.getElementById("transcriptForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    document.getElementById("successMessage").style.display = "block";
+
+    this.reset();
+
+});
+
+</script>
+
+</body>
+</html>
