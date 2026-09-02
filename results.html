@@ -118,10 +118,14 @@
 
             <div class="card-heading">
 
-                <div>
-                    <p class="section-label">FIRST TERM</p>
-                    <h2>Subject Results</h2>
-                </div>
+    <div>
+        <p class="section-label">FIRST TERM</p>
+        <h2>Subject Results</h2>
+    </div>
+
+    <button class="download-button" onclick="downloadResult()">
+        📄 Download Result
+    </button>
 
             </div>
 
@@ -244,10 +248,14 @@
 
 
     <script>
-        function logout() {
-            window.location.href = "login.html";
-        }
-    </script>
+    function logout() {
+        window.location.href = "login.html";
+    }
+
+    function downloadResult() {
+        window.print();
+    }
+</script>
 
 </body>
                           </html>
