@@ -1216,8 +1216,80 @@ button {
     color: #202733;
     background: white;
 }
-
 .form-group select:focus {
     border-color: #0b1f3a;
     box-shadow: 0 0 0 3px rgba(11, 31, 58, 0.08);
+}
+
+/* ==========================================
+   RESULTS PAGE
+========================================== */
+
+.page-back {
+    margin-bottom: 20px;
+}
+
+.page-back a {
+    color: #0b1f3a;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.page-back a:hover {
+    color: #c9a227;
+}
+
+.student-information {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.student-information div {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-information span {
+    color: #697381;
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.student-information strong {
+    color: #0b1f3a;
+    font-size: 14px;
+}
+
+.result-summary {
+    grid-template-columns: repeat(3, 1fr);
+    margin-top: 20px;
+}
+
+.academic-comment {
+    color: #596473;
+    font-size: 14px;
+    line-height: 1.8;
+    max-width: 850px;
+}
+
+
+/* Results mobile */
+
+@media (max-width: 700px) {
+
+    .student-information {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .result-summary {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .student-information {
+        grid-template-columns: 1fr;
+    }
 }
